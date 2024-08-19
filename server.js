@@ -66,6 +66,10 @@ app.get("/ver-reservas", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
 // Iniciar el servidor
 app.listen(port, () => {
   console.log(`Servidor funcionando en http://localhost:${port}`);
