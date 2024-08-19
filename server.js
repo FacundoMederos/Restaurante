@@ -3,6 +3,10 @@ const fs = require("fs");
 const app = express();
 const port = 3000;
 
+app.use("/css", express.static(__dirname + "/css"));
+app.use("/img", express.static(__dirname + "/img"));
+app.use("/js", express.static(__dirname + "/js"));
+
 // Middleware para procesar datos de formularios
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
