@@ -7,6 +7,22 @@ app.use("/css", express.static(__dirname + "/css"));
 app.use("/img", express.static(__dirname + "/img"));
 app.use("/js", express.static(__dirname + "/js"));
 
+app.get("/reservas.html", (req, res) => {
+  res.sendFile(__dirname + "/reservas.html");
+});
+
+app.get("/menu.html", (req, res) => {
+  res.sendFile(__dirname + "/menu.html");
+});
+
+app.get("/shows.html", (req, res) => {
+  res.sendFile(__dirname + "/shows.html");
+});
+
+app.get("/ubicacion.html", (req, res) => {
+  res.sendFile(__dirname + "/ubicacion.html");
+});
+
 // Middleware para procesar datos de formularios
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
