@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rico y Abundante</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="cabezera">
+      <nav>
+        <div class="logos">
+          <a href="index.html">
+            <img class="logo" src="img/Logo.png" alt="Logo" />
+          </a>
+        </div>
+        <a href="reservas.html" class="cabezera-texto">Reserva</a>
+        <a href="menu.html" class="cabezera-texto">Menú</a>
+        <a href="shows.html" class="cabezera-texto">Shows</a>
+        <a href="ubicacion.html" class="cabezera-texto">Ubicación</a>
+        <a href="about.html" class="cabezera-texto">Nosotros</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sección de Bienvenida -->
+      <section class="welcome">
+        <h1>Bienvenidos a Rico y Abundante</h1>
+        <p>
+          Disfruta de la mejor comida casera con un toque especial. Nuestra
+          pasión es servirte platos deliciosos en un ambiente acogedor.
+        </p>
+      </section>
+
+      <!-- Carrusel de Imágenes -->
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/Carrusel/asado1.jpg" alt="Imagen 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="../img/Carrusel/hamburgesa1.webp" alt="Imagen 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="../img/Carrusel/picada.jpg" alt="Imagen 3" />
+          </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">
+          &#10094;
+        </button>
+        <button class="carousel-control next" onclick="nextSlide()">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Sección de Promociones -->
+      <section class="promotions">
+        <h2>Ofertas Especiales</h2>
+        <div class="promotion-item">
+          <h3>2x1 en Sanguches</h3>
+          <p>Disponible todos los martes y jueves. ¡No te lo pierdas!</p>
+        </div>
+        <div class="promotion-item">
+          <h3>Descuento del 20% en Pizzas</h3>
+          <p>
+            Todos los domingos de 18:00 a 21:00. ¡Ideal para compartir con
+            amigos!
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección de Testimonios -->
+      <section class="testimonials">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <blockquote>
+          "La mejor milanesa que he probado. El servicio es excelente, me siento
+          como en casa."
+          <cite>- Juan Pérez</cite>
+        </blockquote>
+        <blockquote>
+          "Ambiente acogedor y la comida es simplemente deliciosa. ¡Volveré sin
+          duda!"
+          <cite>- Ana Rodríguez</cite>
+        </blockquote>
+      </section>
+
+      <!-- Sección de Llamadas a la Acción -->
+      <section class="cta">
+        <a href="reservas.html" class="cta-button">Reserva tu Mesa</a>
+        <a href="menu.html" class="cta-button">Ver Menú</a>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

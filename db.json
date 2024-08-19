@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "Facundo",
+    "celular": "092169192",
+    "hora": "20:10",
+    "numeroPersonas": "3",
+    "mesa": "2"
+  },
+  {
+    "nombre": "Facundo",
+    "celular": "22393",
+    "hora": "10:20",
+    "numeroPersonas": "4",
+    "mesa": "1"
+  },
+  {
+    "nombre": "Facundo",
+    "celular": "22393",
+    "hora": "10:20",
+    "numeroPersonas": "3",
+    "mesa": "1"
+  },
+  {
+    "nombre": "Facundo",
+    "celular": "092169192",
+    "hora": "10:20",
+    "numeroPersonas": "7",
+    "mesa": "4"
+  }
+]

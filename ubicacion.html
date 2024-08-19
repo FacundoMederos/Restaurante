@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubicación - Rico y Abundante</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="cabezera">
+      <nav>
+        <div class="logos">
+          <a href="index.html">
+            <img class="logo" src="img/Logo.png" alt="Logo"
+          /></a>
+        </div>
+        <a href="reservas.html" class="cabezera-texto">Reserva</a>
+        <a href="menu.html" class="cabezera-texto">Menú</a>
+        <a href="shows.html" class="cabezera-texto">Shows</a>
+        <a href="ubicacion.html" class="cabezera-texto">Ubicación</a>
+        <a href="about.html" class="cabezera-texto">Nosotros</a>
+      </nav>
+    </header>
+
+    <h1 style="text-align: center">Ubicación</h1>
+
+    <!-- Iframe de Google Maps -->
+    <div style="text-align: center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6588.384034192524!2d-55.768071058863!3d-34.345590867796616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a06b00056d62b7%3A0xb45e4532ac99f401!2sRico%20y%20sbundante!5e0!3m2!1ses!2suy!4v1724039634386!5m2!1ses!2suy"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Botón para obtener direcciones -->
+    <div id="directions" style="text-align: center; margin-top: 20px">
+      <button onclick="getDirections()">Cómo llegar</button>
+    </div>
+
+    <script>
+      // Obtener direcciones desde la ubicación actual
+      function getDirections() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((position) => {
+            const userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            // URL para obtener direcciones en Google Maps
+            const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation.lat},${userLocation.lng}&destination=-34.345590867796616,-55.768071058863&travelmode=driving`;
+            window.open(directionsUrl, "_blank");
+          });
+        } else {
+          alert("La geolocalización no está soportada en tu navegador.");
+        }
+      }
+    </script>
+  </body>
+</html>

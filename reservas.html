@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="cabezera">
+      <nav>
+        <div class="logos">
+          <a href="index.html">
+            <img class="logo" src="img/Logo.png" alt="Logo"
+          /></a>
+        </div>
+        <a href="reservas.html" class="cabezera-texto">Reserva</a>
+        <a href="menu.html" class="cabezera-texto">Menú</a>
+        <a href="shows.html" class="cabezera-texto">Shows</a>
+        <a href="ubicacion.html" class="cabezera-texto">Ubicación</a>
+        <a href="about.html" class="cabezera-texto">Nosotros</a>
+      </nav>
+    </header>
+
+    <h1>Reservar Mesa</h1>
+    <form id="reserva" action="/reservas" method="POST">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+      <label for="celular">Celular:</label>
+      <input type="text" id="celular" name="celular" required /><br /><br />
+
+      <label for="hora">Hora (10:00 am - 00:00):</label>
+      <input
+        type="time"
+        id="hora"
+        name="hora"
+        min="10:00"
+        max="00:00"
+        required
+      /><br /><br />
+
+      <label for="numeroPersonas">Número de personas:</label>
+      <input
+        type="number"
+        id="numeroPersonas"
+        name="numeroPersonas"
+        min="1"
+        max="12"
+        required
+      /><br /><br />
+
+      <label for="mesa">Mesa:</label>
+      <select id="mesa" name="mesa" required>
+        <option value="1">Mesa 1</option>
+        <option value="2">Mesa 2</option>
+        <option value="3">Mesa 3</option>
+        <option value="4">Mesa 4</option>
+        <option value="5">Mesa 5</option>
+        <option value="6">Mesa 6</option>
+        <option value="7">Mesa 7</option>
+        <option value="8">Mesa 8</option>
+        <option value="9">Mesa 9</option>
+        <option value="10">Mesa 10</option>
+        <option value="11">Mesa 11</option>
+        <option value="12">Mesa 12</option></select
+      ><br /><br />
+
+      <button type="submit">Reservar</button>
+    </form>
+  </body>
+</html>
